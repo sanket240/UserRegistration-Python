@@ -35,9 +35,9 @@ def test_phone_number_improper_should_return_sad():
     assert user.phone_number_validation("9422484996") == "Sad"
 
 
-def test_password_rule2_when_proper_should_return_happy():
-    assert user.password_validation("Sanketdu") == "Happy"
+def test_password_rule3_when_proper_should_return_happy():
+    assert user.password_validation("Sanket0D") == "Happy"
 
 
-def test_password_rule2_improper_should_return_sad():
-    assert user.password_validation("sanky") == "Sad"
+def test_password_rule3_improper_should_return_sad():
+    assert user.password_validation("sankyy") == "Sad"
