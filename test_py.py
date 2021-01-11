@@ -4,8 +4,16 @@ user = UserRegistration()
 
 
 def test_first_name_when_proper_should_return_happy():
-    assert user.get_first_name("Sanket") == "Happy"
+    assert user.first_name_validation("Sanket") == "Happy"
 
 
 def test_first_name_when_improper_should_return_sad():
-    assert user.get_first_name("Sa") == "Sad"
+    assert user.first_name_validation("Sa") == "Sad"
+
+
+def test_last_name_when_proper_should_return_happy():
+    assert user.last_name_validation("Dulange") == "Happy"
+
+
+def test_last_name_when_improper_should_return_sad():
+    assert user.last_name_validation("Du") == "Sad"
