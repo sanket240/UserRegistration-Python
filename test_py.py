@@ -19,9 +19,25 @@ def test_last_name_when_improper_should_return_sad():
     assert user.last_name_validation("Du") == "Sad"
 
 
+def test_email_when_proper_should_return_happy():
+    assert user.email_validation("sanketdulange24@gmail.com") == "Happy"
+
+
+def test_email_when_improper_should_return_sad():
+    assert user.email_validation("sank.gmail.com") == "Sad"
+
+
 def test_phone_number_when_proper_should_return_happy():
     assert user.phone_number_validation("91 9422484996") == "Happy"
 
 
 def test_phone_number_improper_should_return_sad():
     assert user.phone_number_validation("9422484996") == "Sad"
+
+
+def test_password_rule1_when_proper_should_return_happy():
+    assert user.password_validation("sanketdu") == "Happy"
+
+
+def test_password_rule1_improper_should_return_sad():
+    assert user.password_validation("sanky") == "Sad"
