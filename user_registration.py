@@ -7,7 +7,7 @@ class UserRegistration:
         self.last_name = "^[A-Z][a-zA-Z]{2,}$"
         self.email = "^[a-zA-z]{3}[0-9a-zA-Z\\.\\_\\-\\+]*@[a-z]*\\.(co|com.au|in|net|in|com.com|com|)$"
         self.phone = "^[0-9]{2} [0-9]{10}$"
-        self.password = "^[a-zA-Z0-9]{8,}$"
+        self.password = "^(?=.*[A-Z])[a-zA-Z0-9]{8,}$"
 
     def first_name_validation(self, first_name_input):
         if re.match(self.first_name, first_name_input):
